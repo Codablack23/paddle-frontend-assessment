@@ -1,0 +1,17 @@
+@mixin  md {
+    @media screen  and (max-width:map-get($breakpoints,'md')){
+        @content
+    }
+};
+
+@mixin  sm {
+    @media screen  and (max-width:map-get($breakpoints,'sm')){
+        @content
+    }
+};
+
+@mixin  flex($align:none,$justify:none)  {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}

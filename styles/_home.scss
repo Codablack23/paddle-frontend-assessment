@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Raleway&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.HomeLayout.dark{
+  max-width: 100%;
+  min-height: 100vh;
+  padding:$padding * 1.2 $padding * 3.5;
+  background-image:url("/images/bg.svg") ;
+  background-size: cover;
+}
+.nav{
+  @include flex($align:center);
+  max-width: 100%;
+  min-width: 100%;
+  .nav-header{
+    @include flex($align:center,$justify:space-between);
+    .open-nav{
+      background:none;
+      border: none;
+      display: none;
+      i{
+        color: #fff;
+        font-size: 22px;
+      }
+    }
+  }
+  .logo{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .logo.logo-dark{
+    color: #fff;
+  }
+  .navbar{
+    @include flex($align:center,$justify:space-between);
+    margin-left: auto;
+   .nav-link,.nav-btn{
+      margin: 0 $padding * 1.2;
+      text-transform: uppercase;
+    }
+    .nav-btn{
+      border:none;
+      border-radius: 30px;
+      padding:$padding $padding * 1.7;
+      color: #fff;
+      background-color: $secondary;
+      cursor: pointer;
+    }
+  }
+  .navbar.navbar-dark{
+    .nav-link {
+      color: #fff;
+    }
+  }
+}
+
+.hero{
+  max-width: 700px;
+  margin: $margin * 2.5 auto ;
+  margin-top: $margin * 6;
+
+  color: #fff;
+  .hero-text,
+  .hero-title
+  {text-align: center;}
+  .hero-title{
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 900;
+  }
+  .hero-text{
+    width: 90%;
+    margin: auto;
+    margin-top:$margin;
+  }
+}
+
+.countdown-container{
+  @include flex($align:center,$justify:space-between);
+  width: 65%;
+  margin:$margin * 2.5 auto;
+  .time-container{
+    > *{
+      color: black;
+    }
+    @include flex($align:center,$justify:center);
+    background: #fff;
+    width: 23%;
+    min-height: 18vh;
+    border-radius: 7px;
+    .time{
+      text-align: center;
+      h3{
+        font-size: 33px;
+        font-weight: 900;
+      }
+    }
+  }
+}
+.name-form{
+  width: 65%;
+  @include flex($align:center,$justify:space-between);
+  margin: auto;
+  input{
+    width: 45%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    color: gray;
+    padding: $padding;
+  }
+}
+.subscribe-container{
+  @include flex;
+  background: #fff;
+  border-radius: 30px;
+  width: 75%;
+  margin: $margin auto;
+  height: 50px;
+  input{
+    background-color: none;
+    margin:$margin;
+    border: none;
+    color: grey;
+    width: 50%;
+    border: none;
+    outline: none;
+  }
+  .subscribe-btn{
+    background-color: $secondary;
+    margin-left: auto;
+    border-radius:30px;
+    border: none;
+    padding: $padding $padding * 3.5;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    @include flex($align:center,$justify:space-between);
+  }
+}
+
+.main-footer{
+  max-width: 800px;
+  margin:0  auto;
+  margin-top: $margin * 10;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  .social-media{
+    @include flex($align:center,$justify:center);
+    margin-bottom: $margin * 1;
+    p{
+      background: grey;
+      margin: 0 $margin;
+      height: 25px;
+      width: 35px;
+      border-radius: 7px;
+      i{
+        color:#212121;
+      }
+    }
+  }
+}
+
+.footer-links{
+  @include flex($align:center,$justify:center);
+  margin-bottom: $margin;
+  .footer-link{
+    margin: 0 $margin * 1.5;
+  }
+  
+}
+.main-footer.footer-dark{
+  color: grey;
+}
+
+@include md{
+  .HomeLayout.dark{
+    padding: $padding;
+  }
+  .hero{
+    .hero-title{
+      font-size: 30px;
+    }
+  }
+  .countdown-container{
+    width: 80%;
+  }
+  .name-form{
+    width: 80%;
+  }
+  .subscribe-container{
+    width: 80%;
+    .subscribe-btn{
+      font-size: 11px;
+   }
+  }
+  
+}
+
+@include sm{
+  
+  .nav{
+    display: block;
+    .nav-header{
+      .open-nav{
+        display: block;
+      }
+    }
+    .navbar{
+      position: relative;
+      max-height:0px;
+      overflow: hidden;
+      transition: all ease-in 0.4s;
+      width: 100%;
+      display: block;
+      text-align: center;
+      .nav-link{
+        display: block;
+        text-align: center;
+        margin: $margin * 1.5 auto;
+      }
+    }
+
+  }
+ 
+  .countdown-container{
+    width: 90%;
+    .time-container{
+      .time{
+        text-align: center;
+        h3{
+          font-size: 25px;
+          font-weight: 900;
+        }
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .name-form{
+    width: 90%;
+  }
+  .subscribe-container{
+    width: 92%;
+  }
+  .main-footer{
+   > *{
+     font-size: 13px;
+   }
+  }
+}
