@@ -20,10 +20,15 @@ a {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
-.HomeLayout.dark{
+.HomeLayout{
+  max-width: 100%;
+  overflow: hidden;
   max-width: 100%;
   min-height: 100vh;
   padding:$padding * 1.2 $padding * 3.5;
+}
+.HomeLayout.dark{
+  
   background-image:url("/images/bg.svg") ;
   background-size: cover;
 }
@@ -56,6 +61,7 @@ a {
    .nav-link,.nav-btn{
       margin: 0 $padding * 1.2;
       text-transform: uppercase;
+      font-size: 12px;
     }
     .nav-btn{
       border:none;
@@ -69,6 +75,7 @@ a {
   .navbar.navbar-dark{
     .nav-link {
       color: #fff;
+    
     }
   }
 }
@@ -197,7 +204,7 @@ a {
 }
 
 @include md{
-  .HomeLayout.dark{
+  .HomeLayout{
     padding: $padding;
   }
   .hero{
@@ -241,6 +248,7 @@ a {
         display: block;
         text-align: center;
         margin: $margin * 1.5 auto;
+
       }
     }
 

@@ -21,10 +21,10 @@ export default function Nav({isDark}){
            </button>
             </div>
             <div className={`navbar navbar-${isDark?"dark":"light"}`} id="navbar">
-                <Link href={"/"}>
+                <Link href={"/about"}>
                  <a className="nav-link">About Us</a>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/blog"}>
                  <a className="nav-link">Blog</a>
                 </Link>
                 <button className="nav-btn">Contact Us</button>

@@ -1,0 +1,117 @@
+.about-header{
+    position: relative;
+    margin:0 auto $margin auto;
+    padding: $padding * 10;
+    color: #fff;
+    max-width: 100%;
+    width: 100%;
+    .title{
+        position: relative;
+        font-size: 50px;
+        margin-left: 37%;
+        font-weight: 400;
+        margin-top: $margin * 0.5;
+        z-index: 2;
+    }
+    .content{
+        position: relative;
+        width: 35%;
+        font-size: 14px;
+        margin-left: auto;
+        margin-top: $margin * 6;
+        z-index: 2;
+    }
+    .overlay{
+     position: absolute;
+     top:50px;
+     left: -50px;
+     width: 63%;
+     height: 73vh;
+     z-index: 1;
+     background: rgba(255,255,255,0.1);
+     backdrop-filter: blur(6px);
+    }
+}
+.about-title{
+    position: relative;
+    z-index: 2;
+   @include flex($align:center);
+   width:100%;
+   margin-left: 30%;
+   hr{
+    width: 40px;
+    margin-right: 5px;
+   }
+}
+
+.about-description{
+    max-width: 850px;
+    margin: $margin auto;
+    margin-top: $margin * 3;
+    color: #fff;
+    font-size: 40px;
+}
+.why-us-section{
+    position: relative;
+    max-width: 850px;
+    min-height: 50vh;
+    margin: $margin auto;
+    margin-top: $margin * 8;
+    @include flex($justify:space-between);
+    color: #fff;
+    .why-us-title{
+        @include flex($align:center);
+        width:100%;
+        hr{
+            width: 40px;
+            margin-right: 5px;
+        }
+    }
+    .item{
+        position: relative;
+        z-index: 2;
+        width: 52%;
+        font-size: 14px;
+        padding: $padding;
+    }
+    .item:nth-child(2){
+        width: 35%;
+        position: relative;
+        z-index: 2;
+    }
+    .overlay{
+        position: absolute;
+        z-index: 1;
+        right: -200px;
+        top: -20px;
+        width: 85%;
+        height: 100%;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(8px);
+    }
+}
+.questions-section{
+    width: 120%;
+    margin-left: -45px;
+    margin-right: auto;
+    left: 0;
+    padding: $padding;
+    padding-left: $padding * 3;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    margin-top:$margin * 4.5;
+    min-height: 30vh;
+    margin-bottom: $margin;
+    .heading{
+        font-size: 25px
+    }
+    .text{
+        font-size: 15px;
+        font-weight: 500;
+        max-width: 650px;
+    }
+    a{
+        color: #FF00F7;
+    }
+}
