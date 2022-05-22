@@ -7,7 +7,7 @@ export default function HomeLayout({title,children,isDark}){
          <Head>
              <title>Metrics | {title}</title>
          </Head>
-         <Nav isDark={isDark}/>
+         <Nav isDark={isDark} isHome={title==="Home"}/>
          <div className="content">
            {children}
          </div>

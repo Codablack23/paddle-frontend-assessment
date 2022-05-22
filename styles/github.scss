@@ -1,0 +1,99 @@
+.github-repos-container{
+    &::-webkit-scrollbar{
+        width:8px;
+        background: #f9f9f9;
+        border-radius: 7px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background:$secondary;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    max-width: 1080px;
+    min-height: 85vh;
+    max-height:85vh;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    margin: $margin auto;
+    margin-top: $margin * 5;
+    padding: $padding;
+    padding-top: 0;
+    .title{
+        text-align: center;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        color: $secondary;
+        padding: $padding;
+    }
+}
+.github-repo{
+    width: 100%;
+    @include flex();
+    margin-bottom: $margin;
+    .avatar-container{
+        width:25%;
+        border-radius: 7px;
+        margin-right: $margin * 1.5;
+        height: 30vh;
+        .avatar{
+          width: 100%;
+          border-radius: 7px;
+          object-fit: cover;
+          height: 30vh;
+        }
+    }
+    .repo-details{
+        width: 70%;
+    }
+    .repo-name{
+        margin-bottom: $margin;
+    }
+    .repo-stars-details{
+        @include flex($align:center);
+        margin-top: $margin * 0.6;
+        p{
+            margin-right:$margin;
+        }
+    }
+    .stars,.issues{
+        border: 1px solid #111;
+        padding: $padding * 0.5 $padding;
+        margin-bottom: $margin;
+    }
+}
+
+@include md{
+    .github-repo{
+        .avatar-container{
+            height: 50vh;
+            width: 40%;
+            .avatar{
+                height: 50vh;
+            }
+        }
+        .repo-details{
+            width: 55%;
+        }
+      .repo-stars-details{
+          display: block;
+      }
+    }
+}
+
+@include sm{
+    .github-repo{
+        display: block;
+        .avatar-container{
+            width: 100%;    
+            height: 40vh;
+            .avatar{
+                height: 40vh;
+            }
+        }
+        .repo-details{
+            width: 100%;
+        }
+    }
+}

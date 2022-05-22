@@ -1,10 +1,12 @@
 import HomeLayout from "~/components/layouts/HomeLayout"
+import Contact from "~/components/widgets/Contact"
 
 
 
 export default function ComingSoon(){
     return(
       <HomeLayout title={"Home"} isDark={true}>
+         <Contact/>
          <div className="hero">
              <h1 className="hero-title">Something awesome is coming soon</h1>
              <p className="hero-text">Your all-in-one affiliate marketing tracking software <b>track</b>, <b>automate</b> and <b>optimize</b> your campaigns.</p>

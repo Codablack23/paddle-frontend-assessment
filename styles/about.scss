@@ -1,7 +1,7 @@
 .about-header{
     position: relative;
     margin:0 auto $margin auto;
-    padding: $padding * 10;
+    padding: $padding * 5;
     color: #fff;
     max-width: 100%;
     width: 100%;
@@ -113,5 +113,90 @@
     }
     a{
         color: #FF00F7;
+    }
+}
+
+@include md{
+    .about-header{
+      
+        .title{
+            margin-left: 10px;
+            font-size: 43px;
+        }
+        .content{
+           margin-left:10px ;
+           width: 80%;
+        }
+        .overlay{
+         width: 90%;
+         min-height: 30vh;
+        }
+    }
+    .about-title{
+        margin-left: 0;
+    }
+    .about-description{
+        padding: $padding * 0.5;
+        font-size: 30px;
+        text-align: center;
+        margin-top: $margin * 5;
+    }
+    .why-us-section{
+        display: block;
+        .item{
+            &:nth-child(2){
+                width: 80%;
+                margin: auto;
+            }
+            width: 80%;
+            margin: auto;
+
+        }
+        .overlay{
+         top: 150px;   
+         left: -13px;
+         right: unset;
+         height: 50vh;
+         width: 92%;
+        }
+    }
+}
+
+@include sm{
+    .about-header{
+        padding: 0;
+        padding-top: $padding * 5;
+        margin-bottom: $margin * 2.5;
+        .title{
+            margin-left: 0px;
+            font-size: 30px;
+        }
+        .content{
+           margin-left:10px ;
+           width: 80%;
+           margin-top: 10px;
+        }
+        .overlay{
+       
+         width: 110%;
+         min-height: 20vh;
+        }
+    }
+    .about-description{
+        margin-top: $margin * 7;
+    }
+    .why-us-section{
+        .item{
+            &:nth-child(2){
+                width: 92%;
+                margin: auto;
+            }
+            width: 92%;
+            margin: auto;
+
+        }
+        .overlay{
+            display: none;
+        }
     }
 }

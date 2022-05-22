@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 
-export default function Nav({isDark}){
+export default function Nav({isDark,isHome}){
     function OpenNav(){
        const nav = document.querySelector('#navbar')
        if(nav.style.maxHeight){
@@ -9,6 +9,16 @@ export default function Nav({isDark}){
        }else{
         nav.style.maxHeight = `${30}vh`
        }
+    }
+    function openContact(){
+      if(isHome){
+        const contact = document.querySelector('#contact')
+        contact.style.transform = "scale(1)"
+      }
+      else{
+
+      }
+  
     }
     return(
         <nav className="nav">
@@ -27,7 +37,7 @@ export default function Nav({isDark}){
                 <Link href={"/blog"}>
                  <a className="nav-link">Blog</a>
                 </Link>
-                <button className="nav-btn">Contact Us</button>
+                <button className="nav-btn" onClick={openContact}>Contact Us</button>
             </div>
         </nav>
     )

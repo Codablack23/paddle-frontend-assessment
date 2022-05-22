@@ -1,0 +1,88 @@
+.contact-container{
+    width: 100%;
+    background:rgb(32,0,67,0.5);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+    z-index: 1;
+    transform: scale(0);
+    transition: all ease-in 0.7s;
+}
+.contact-form-container{
+    color: #fff;
+    max-width: 600px;
+    margin-left: auto;
+    padding: $padding;
+    background: rgba(0, 0, 0, 0.5);
+    min-height:100vh;
+    .close-btn{
+        cursor: pointer;
+        margin-left: -35px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 60px;
+        height: 60px;
+        border: none;
+        background: #fff;
+        border-radius: 50%;
+        @include flex($align:center,$justify:center);
+        color: $secondary;
+        i{
+            font-size:21px;
+        }
+    }
+    .heading{
+        font-size: 22px;
+        text-align: center;
+        width: 90%;
+        margin: $margin auto;
+    }
+}
+.contact-form{
+
+    width: 95%;
+    margin: $margin auto;
+    label{
+        display: block;
+        margin: $margin 0;
+        font-size: 14px;
+    }
+    input,textarea{
+     width: 90%;
+     outline: none;
+     border-radius: 7px;
+     border: none;
+     padding: $padding;
+     min-height: 50px;
+     margin-bottom: $margin * 2;
+    }
+    textarea{
+        min-height: 120px;
+        resize: none;
+    }
+    button{
+        display: block;
+        min-width:180px;
+        min-height: 60px;
+        font-size: 18px;
+        border-radius: 30px;
+        text-align: center;
+        border: none;
+        background: $secondary;
+        color: #fff;
+        cursor: pointer;
+    }
+  
+}
+
+@include md{
+    .contact-form-container{
+        .close-btn{
+            margin-left: 10px;
+        }
+    }
+}
